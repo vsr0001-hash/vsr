@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Baseline Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Family Baseline Survey</h1>
+            <p class="subtitle">Please complete all sections of this survey accurately.</p>
+        </header>
+
+        <form id="surveyForm">
+            <!-- Section 1: Respondent Information -->
+            <fieldset>
+                <legend>Section 1: Respondent Information</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="">-- Select --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer_not_to_say">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. +1 555-123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Section 2: Household Information -->
+            <fieldset>
+                <legend>Section 2: Household Information</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address">Residential Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City / Town <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Region / State</label>
+                        <input type="text" id="region" name="region">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="householdSize">Number of Household Members <span class="required">*</span></label>
+                        <input type="number" id="householdSize" name="householdSize" min="1" max="30" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="childrenCount">Number of Children (under 18)</label>
+                        <input type="number" id="childrenCount" name="childrenCount" min="0" max="20">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="housingType">Type of Housing <span class="required">*</span></label>
+                    <select id="housingType" name="housingType" required>
+                        <option value="">-- Select --</option>
+                        <option value="owned">Owned</option>
+                        <option value="rented">Rented</option>
+                        <option value="shared">Shared / Co-habiting</option>
+                        <option value="temporary">Temporary Shelter</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Section 3: Education -->
+            <fieldset>
+                <legend>Section 3: Education</legend>
+
+                <div class="form-group">
+                    <label for="educationLevel">Highest Education Level of Head of Household <span class="required">*</span></label>
+                    <select id="educationLevel" name="educationLevel" required>
+                        <option value="">-- Select --</option>
+                        <option value="none">No Formal Education</option>
+                        <option value="primary">Primary School</option>
+                        <option value="secondary">Secondary School</option>
+                        <option value="vocational">Vocational / Technical</option>
+                        <option value="university">University / College</option>
+                        <option value="postgraduate">Postgraduate</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Are all school-age children currently enrolled in school? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="childrenEnrolled" value="yes" required> Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="childrenEnrolled" value="no"> No
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="childrenEnrolled" value="na"> Not Applicable
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Section 4: Income & Employment -->
+            <fieldset>
+                <legend>Section 4: Income &amp; Employment</legend>
+
+                <div class="form-group">
+                    <label for="employmentStatus">Employment Status of Head of Household <span class="required">*</span></label>
+                    <select id="employmentStatus" name="employmentStatus" required>
+                        <option value="">-- Select --</option>
+                        <option value="employed_formal">Employed (Formal)</option>
+                        <option value="employed_informal">Employed (Informal)</option>
+                        <option value="self_employed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="retired">Retired</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="monthlyIncome">Estimated Monthly Household Income <span class="required">*</span></label>
+                    <select id="monthlyIncome" name="monthlyIncome" required>
+                        <option value="">-- Select --</option>
+                        <option value="below_500">Below $500</option>
+                        <option value="500_1000">$500 - $1,000</option>
+                        <option value="1000_2000">$1,000 - $2,000</option>
+                        <option value="2000_5000">$2,000 - $5,000</option>
+                        <option value="above_5000">Above $5,000</option>
+                        <option value="prefer_not_to_say">Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Primary Sources of Income (select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="wages"> Wages / Salary
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="business"> Business / Trade
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="farming"> Farming / Agriculture
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="remittances"> Remittances
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="government_aid"> Government Aid
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="incomeSource" value="other"> Other
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Section 5: Health -->
+            <fieldset>
+                <legend>Section 5: Health</legend>
+
+                <div class="form-group">
+                    <label>Does the family have access to a healthcare facility? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="healthcareAccess" value="yes" required> Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="healthcareAccess" value="no"> No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="healthcareDistance">Distance to Nearest Healthcare Facility</label>
+                    <select id="healthcareDistance" name="healthcareDistance">
+                        <option value="">-- Select --</option>
+                        <option value="less_1km">Less than 1 km</option>
+                        <option value="1_5km">1 - 5 km</option>
+                        <option value="5_10km">5 - 10 km</option>
+                        <option value="more_10km">More than 10 km</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Does any family member have a chronic illness or disability?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="chronicIllness" value="yes"> Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="chronicIllness" value="no"> No
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="chronicIllness" value="prefer_not_to_say"> Prefer not to say
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Primary Source of Drinking Water</label>
+                    <select id="waterSource" name="waterSource">
+                        <option value="">-- Select --</option>
+                        <option value="piped">Piped Water</option>
+                        <option value="well">Well / Borehole</option>
+                        <option value="spring">Spring</option>
+                        <option value="river">River / Stream</option>
+                        <option value="rainwater">Rainwater Collection</option>
+                        <option value="purchased">Purchased / Bottled</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Section 6: Additional Notes -->
+            <fieldset>
+                <legend>Section 6: Additional Notes</legend>
+
+                <div class="form-group">
+                    <label for="notes">Any additional comments or observations</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Enter any relevant notes here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="surveyDate">Date of Survey <span class="required">*</span></label>
+                    <input type="date" id="surveyDate" name="surveyDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="surveyor">Surveyor Name <span class="required">*</span></label>
+                    <input type="text" id="surveyor" name="surveyor" required>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                <button type="submit" class="btn btn-primary">Submit Survey</button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="success-message" hidden>
+            <h2>Survey Submitted Successfully</h2>
+            <p>Thank you for completing the Family Baseline Survey.</p>
+            <pre id="submittedData"></pre>
+            <button class="btn btn-primary" onclick="resetForm()">Submit Another Survey</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
